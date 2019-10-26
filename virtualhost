@@ -5,3 +5,11 @@ https://www.cloudways.com/blog/configure-virtual-host-on-windows-10-for-wordpres
 
 
 https://github.com/LaraShout/ecommerce-application-templates
+
+
+
+
+git reset --mixed origin/master
+git add .
+git commit -m "This is a new commit for what I originally planned to be amended"
+git push origin master
