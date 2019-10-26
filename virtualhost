@@ -17,17 +17,41 @@ git push origin master
 
 
 
-///////////////admin.php///////////////////////////
+///////////////LoginController.php///////////////////////////
 
-Route::group(['prefix'  =>  'admin'], function () {
+namespace App\Http\Controllers\Admin;
 
-    Route::get('login', 'Admin\LoginController@showLoginForm')->name('admin.login');
-    Route::post('login', 'Admin\LoginController@login')->name('admin.login.post');
-    Route::get('logout', 'Admin\LoginController@logout')->name('admin.logout');
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
-    Route::get('/', function () {
-        return view('admin.dashboard.index');
-    });
+class LoginController extends Controller
+{
+    use AuthenticatesUsers;
 
-});
+    /**
+     * Where to redirect admins after login.
+     *
+     * @var string
+     */
+    protected $redirectTo = '/admin';
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('guest:admin')->except('logout');
+    }
+
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function showLoginForm()
+    {
+        return view('admin.auth.login');
+    }
+}
 
