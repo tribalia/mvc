@@ -11,5 +11,5 @@ https://github.com/LaraShout/ecommerce-application-templates
 
 git reset --mixed origin/master
 git add .
-git commit -m "This is a new commit for what I originally planned to be amended"
+git commit -m "faza 0"
 git push origin master
