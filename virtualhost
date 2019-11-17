@@ -6,6 +6,16 @@ https://www.cloudways.com/blog/configure-virtual-host-on-windows-10-for-wordpres
 
 https://github.com/LaraShout/ecommerce-application-templates
 
-Route::get ( '/' , function () { return 'Hello, World!' ; });
 
-Route::get ( '/' , function () { return view ( 'welcome' ); });
+// ruta
+
+Route::get('/', 'WelcomeController@test');
+
+// in WelcomeController
+
+public function test()
+    {
+        return view('test/welcome');
+    }
+
+
