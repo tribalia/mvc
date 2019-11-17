@@ -6,24 +6,4 @@ https://www.cloudways.com/blog/configure-virtual-host-on-windows-10-for-wordpres
 
 https://github.com/LaraShout/ecommerce-application-templates
 
-
-
-
-git reset --mixed origin/master
-git add .
-git commit -m "faza 0"
-git push origin master
-
-
-
-
-///////////////admins.sql///////////////////////////
-
-INSERT INTO `admins` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Natasha Cassin PhD', 'admin@admin.com', NULL, '$2y$10$v.uxIeixbU2zsnhsyQ.nWe.yK70ElP2qzMeK11Y.5uWKz0Rsd9u5C', NULL, '2019-10-22 03:17:38', '2019-10-22 03:17:38');
-
-
-
-ALTER TABLE `admins`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `admins_email_unique` (`email`);
+Route::get ( '/' , function () { return 'Hello, World!' ; });
