@@ -7,3 +7,5 @@ https://www.cloudways.com/blog/configure-virtual-host-on-windows-10-for-wordpres
 https://github.com/LaraShout/ecommerce-application-templates
 
 Route::get ( '/' , function () { return 'Hello, World!' ; });
+
+Route::get ( '/' , function () { return view ( 'welcome' ); });
